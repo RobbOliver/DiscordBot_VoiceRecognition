@@ -2,7 +2,7 @@
   "name": "discordbot_voicerecognition",
   "version": "1.0.0",
   "description": "A Discord Bot with Voice Recognization",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RobbOliver/DiscordBot_VoiceRecognition#readme",
   "dependencies": {
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "fs": "^0.0.1-security"
   }
 }
