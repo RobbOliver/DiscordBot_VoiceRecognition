@@ -1,5 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
-const tokenConfig = require("/Users/Robson/Documents/My Projects/DiscordBot_VoiceRecognition/config.json");
+const tokenConfig = require("./config.json");
 
 const client = new Client({intents: [
     GatewayIntentBits.Guilds,
