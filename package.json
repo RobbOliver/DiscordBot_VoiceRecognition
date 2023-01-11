@@ -1,0 +1,22 @@
+{
+  "name": "discordbot_voicerecognition",
+  "version": "1.0.0",
+  "description": "A Discord Bot with Voice Recognization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobbOliver/DiscordBot_VoiceRecognition.git"
+  },
+  "author": "Robb Oliver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobbOliver/DiscordBot_VoiceRecognition/issues"
+  },
+  "homepage": "https://github.com/RobbOliver/DiscordBot_VoiceRecognition#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1"
+  }
+}
