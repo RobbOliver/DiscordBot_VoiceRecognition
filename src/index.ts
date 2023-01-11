@@ -17,7 +17,7 @@ client.on('ready', (c) => {
 });
 
 client.on('messageCreate', (msg) => {
-    console.log(msg)
+    if(msg.content === 'Ping') { msg.reply('Pong') }
 });
 
 client.login(TOKEN)
