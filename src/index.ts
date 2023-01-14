@@ -1,7 +1,8 @@
 require('dotenv').config()
 const { token_bot } = process.env;
-import { Client, GatewayIntentBits } from 'discord.js';
 import ready from "./listeners/ready";
+import { Client, GatewayIntentBits } from 'discord.js';
+import interactionCreate from './listeners/interactionCreate';
 
 
 console.log('Start Bot log');
@@ -15,7 +16,6 @@ const client = new Client({intents: [
 ]});
 
 ready(client);
+interactionCreate(client);
 
 client.login(token_bot);
-
-
