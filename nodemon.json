@@ -1,0 +1,7 @@
+{
+    "verbose": true,
+    "ignore": [".git"],
+    "events": {
+        "start": "node -e console.clear()"
+    }
+}
