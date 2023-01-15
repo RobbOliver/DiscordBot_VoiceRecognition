@@ -1,26 +1,21 @@
 require('dotenv').config()
 const { token_bot } = process.env;
-import ready from "./listeners/ready";
-import mensageCreator from "./listeners/mensageCreator";
-import interactionCreate from './listeners/interactionCreate';
-import { Client, GatewayIntentBits, Partials } from 'discord.js';
+import { Collection  } from 'discord.js';
+import { Cliente } from './utils/nClient'
 
+import handlecommands from './handlers/handlerCommands';
+import handlerListeners from './handlers/handlerListeners';
 
 console.log('Start Bot log');
 
+const client = new Cliente()
 
-const client = new Client({
-    intents: [
-      GatewayIntentBits.Guilds,
-      GatewayIntentBits.GuildMembers,
-      GatewayIntentBits.GuildMessages,
-      GatewayIntentBits.GuildVoiceStates,
-      GatewayIntentBits.DirectMessages,
-      GatewayIntentBits.MessageContent,
-    ], partials: [Partials.Channel, Partials.Message, Partials.GuildMember, Partials.User]});
+client.commands = new Collection();
+client.commandsArray = [];
 
-ready(client);
-mensageCreator(client);
-interactionCreate(client);
+client.login(token_bot).then(() => {
+  handlerListeners(client);
+  handlecommands(client);  
+});
 
-client.login(token_bot);
+module.exports = client;
