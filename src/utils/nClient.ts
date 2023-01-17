@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits, Partials } from 'discord.js'
 
+
 export class Cliente extends Client{
     commands: any
     commandsArray: string[] = [];
@@ -24,6 +25,6 @@ export class Cliente extends Client{
                 GatewayIntentBits.GuildInvites,
             ],
             partials: [Partials.Channel, Partials.GuildMember, Partials.Message, Partials.User, Partials.Reaction]
-        }); 
+        });         
     }
 }
