@@ -25,6 +25,7 @@ export default async (client) => {
 
         
         try {            
+            console.log('try')
             await rest.put(
                 Routes.applicationGuildCommands(
                     process.env.client_id_bot,

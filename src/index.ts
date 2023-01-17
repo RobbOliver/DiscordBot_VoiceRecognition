@@ -13,9 +13,9 @@ const client = new Cliente()
 client.commands = new Collection();
 client.commandsArray = [];
 
-client.login(token_bot).then(() => {
-  handlerListeners(client);
-  handlecommands(client);  
-});
+handlerListeners(client);
+handlecommands(client);  
+
+client.login(token_bot)
 
 module.exports = client;
