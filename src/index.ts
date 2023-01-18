@@ -12,7 +12,6 @@ console.log('Start Bot log');
 
 const client = new Cliente()
 
-// addSpeechEvent(client);
 addSpeechEvent(client, { lang: "pt-BR" });
 
 client.commands = new Collection();
