@@ -10,8 +10,8 @@ module.exports = {
         interaction.reply({ content: 'test' })
         
         const voiceConnection = joinVoiceChannel({
-            channelId: "1018868757977895032",
-            guildId: "779484326269681684",
+            channelId: "998686330324275273",
+            guildId: "998686329510568007",
             selfDeaf: false,
             adapterCreator:interaction.guild.voiceAdapterCreator,
         });

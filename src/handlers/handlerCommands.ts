@@ -26,8 +26,8 @@ export default async (client) => {
             rest.put(
                 Routes.applicationGuildCommands(
                     process.env.client_id_bot,
-                    process.env.guild_id_hini
-                    ), 
+                    process.env.guildId
+                    ),
             { body: commandsArray });
             console.log('Commands Registred!');
         } catch (error) {
